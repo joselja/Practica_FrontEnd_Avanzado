@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
@@ -25,19 +26,24 @@ module.exports = {
 
     // plugins que estamos utilizando
     plugins: [
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NamedModulesPlugin(),
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'src', 'index.html'),
             minify: {
                 collapseWhitespace: true
             }
-        })
+        }),
     ],
 
     // dev server configuration
     devServer: {
         open: true, // abre el navegador por defecto
         port: 3000, // puerto del servidor web
-        overlay: true // muestra los errores en pantalla
+        overlay: true, // muestra los errores en pantalla
+        hot: true,
+        contentBase: path.join(__dirname, 'src'),
+        watchContentBase: true
     }
 
 };
