@@ -13,6 +13,16 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
 
+    // module loaders
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
+            }
+        ]
+    },
+
     // plugins que estamos utilizando
     plugins: [
         new HtmlWebpackPlugin({
