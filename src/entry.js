@@ -1,5 +1,8 @@
-import css from './style.css';
+import css from './style.scss';
 
 import moment from 'moment';
 
-console.log("Como mola lola!");
+
+document.querySelector("body").addEventListener("click", (event) => {
+    console.log("HELLO!");
+});

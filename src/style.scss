@@ -1,0 +1,13 @@
+$main-font-family: "Arial";
+$background-color: coral;
+$text-color: white;
+
+body {
+    font-family: $main-font-family;
+    background: $background-color;
+
+    h1 {
+        color: $text-color;
+    }
+
+}
