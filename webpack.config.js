@@ -31,6 +31,13 @@ module.exports = {
                 collapseWhitespace: true
             }
         })
-    ]
+    ],
+
+    // dev server configuration
+    devServer: {
+        open: true, // abre el navegador por defecto
+        port: 3000, // puerto del servidor web
+        overlay: true // muestra los errores en pantalla
+    }
 
 };
