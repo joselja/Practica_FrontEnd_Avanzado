@@ -1,0 +1,20 @@
+$web-header-bg-color: transparentize(white, 0.2);
+$shadow-color: lighten(black, 30%);
+
+.web-header {
+    background: $web-header-bg-color;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 0 5px $shadow-color;
+    transition: 0.25s;
+
+    &:hover {
+        background: opacify($web-header-bg-color, 1);
+    }
+
+    .web-title {
+        color: $brand-color;
+        text-shadow: 0 1px 1px $shadow-color;
+    }
+
+}
