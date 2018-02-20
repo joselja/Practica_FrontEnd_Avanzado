@@ -27,6 +27,7 @@
     "webpack-dev-server": "^2.11.1"
   },
   "dependencies": {
-    "moment": "^2.20.1"
+    "moment": "^2.20.1",
+    "reset-css": "^2.2.1"
   }
 }
