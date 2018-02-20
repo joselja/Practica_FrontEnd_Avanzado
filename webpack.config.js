@@ -25,7 +25,13 @@ module.exports = {
                 use: 'babel-loader',
                 exclude: path.join(__dirname, 'node_modules')
             }, {
-                test: /assets\/.*/,
+                test: /\.(jpe?g|png|gif|svg)$/,
+                use: [
+                    'file-loader?name=[name].[ext]&useRelativePath=true',
+                    'image-webpack-loader'
+                ]
+            }, {
+                test: /assets.[^img]/,
                 use: 'file-loader?name=[name].[ext]&useRelativePath=true'
             }
         ]
