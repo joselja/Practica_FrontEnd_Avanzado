@@ -1,4 +1,5 @@
 import css from './style.scss';
+import pdf from './assets/pdf/google.pdf';
 
 import moment from 'moment';
 
