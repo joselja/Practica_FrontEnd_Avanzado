@@ -10,6 +10,19 @@
     <header class="web-header">
         <h1 class="web-title">Listen</h1>
     </header>
+    <section class="songs-list">
+        <% for (let i = 0; i < 15; i++) { %>
+        <article class="song">
+            <div class="cover">
+                <img src="<%= require('./assets/img/disk-empty.png') %>" alt="Artist name - Song title">
+            </div>
+            <div class="info">
+                <div class="artist">Artist name</div>
+                <div class="title">Song title</div>
+            </div>
+        </article>
+        <% } %>
+    </section>
     <footer class="web-footer">
         2018 &copy; All rights reserved.
     </footer>

@@ -1,0 +1,18 @@
+.songs-list {
+
+    .song {
+        display: flex;
+
+        .cover {
+            flex: 1;
+        }
+
+        .info {
+            flex: 2;
+            .artist {}
+            .title {}
+        }
+
+    }
+
+}

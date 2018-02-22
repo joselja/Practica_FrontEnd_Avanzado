@@ -24,3 +24,6 @@ a {
         transition: all 0.25s;
     }
 }
+
+// Elementos responsive
+img, video, embed, object { max-width: 100%; }
