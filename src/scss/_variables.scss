@@ -34,3 +34,9 @@ $shadow-color: lighten(black, 30%);
 
 // Transitions
 $default-transition-time: 0.25s;
+
+// Responsive breakpoints
+$small-device-width: 376px;
+$medium-device-width: 576px;
+$large-device-width: 750px;
+$extra-large-device-width: 900px;
