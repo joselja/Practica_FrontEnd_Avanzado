@@ -1,16 +1,42 @@
+@import "mixins/text-overflow-ellipsis";
+
 .songs-list {
 
     .song {
         display: flex;
+        background: white;
+        margin: 10px;
+        box-shadow: 0 1px 5px $shadow-color;
+        border-radius: 5px;
+        overflow: hidden;
+        transition: $default-transition-time all;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0 0 5px $shadow-color;
+        }
+        &:active {
+            box-shadow: 0 0 1px $shadow-color;
+        }
 
         .cover {
             flex: 1;
+            background: grey;
         }
 
         .info {
             flex: 2;
-            .artist {}
-            .title {}
+            margin: 15px 15px 0px 15px;
+            overflow: hidden;
+            .artist {
+                margin-top: 10px;
+                font-size: $font-size-small;
+                @include text-overflow-ellipsis;
+            }
+            .title {
+                font-weight: bold;
+                @include text-overflow-ellipsis;
+            }
         }
 
     }

@@ -30,3 +30,7 @@ $main-text-color: $color-mightly-slate;
 $links-color: $color-grandmas-pillow;
 $links-hover-color: $color-cheery-pink;
 $brand-color: $color-cheery-pink;
+$shadow-color: lighten(black, 30%);
+
+// Transitions
+$default-transition-time: 0.25s;
