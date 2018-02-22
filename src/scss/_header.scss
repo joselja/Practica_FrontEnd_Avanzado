@@ -1,16 +1,13 @@
-$web-header-bg-color: transparentize(white, 0.2);
+@import "mixins/transparent-background";
+
 $shadow-color: lighten(black, 30%);
 
 .web-header {
-    background: $web-header-bg-color;
     text-align: center;
     padding: 20px 0;
     box-shadow: 0 0 5px $shadow-color;
-    transition: 0.25s;
-
-    &:hover {
-        background: opacify($web-header-bg-color, 1);
-    }
+    margin: 0 0 30px 0;
+    @include transparent-background(white);
 
     .web-title {
         color: $brand-color;
