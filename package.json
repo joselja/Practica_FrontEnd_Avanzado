@@ -27,7 +27,10 @@
     "webpack-dev-server": "^2.11.1"
   },
   "dependencies": {
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1",
     "moment": "^2.20.1",
+    "popper.js": "^1.12.9",
     "reset-css": "^2.2.1"
   }
 }

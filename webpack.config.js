@@ -20,7 +20,8 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: ['style-loader', 'css-loader?url=false', 'sass-loader']
-            }, {
+            }, 
+            {
                 test: /\.js$/,
                 use: 'babel-loader',
                 exclude: path.join(__dirname, 'node_modules')
