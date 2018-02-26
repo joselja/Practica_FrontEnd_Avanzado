@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
+
 module.exports = {
 
     // entry point: archivo que lee webpack para construir el grafo de dependencias
@@ -59,7 +60,11 @@ module.exports = {
             }, {
                 test: /assets.[^img]/,
                 use: 'file-loader?name=[name].[ext]&useRelativePath=true'
+            }, {
+                test : /\.mp4$/,
+                use  : [ { loader : 'file-loader' } ]
             }
+            
         ]
     },
 

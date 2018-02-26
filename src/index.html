@@ -8,7 +8,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">Notice</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -16,20 +16,23 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="#">Login <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Link</a>
+                      <a class="nav-link" href="#">Register</a>
                     </li>
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
+                        Category
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#">Home</a>
+                        <a class="dropdown-item" href="#">Technology</a>
+                        <a class="dropdown-item" href="#">Culture</a>
+                        <a class="dropdown-item" href="#">Creativity</a>
+                        <a class="dropdown-item" href="#">Media</a>
+                        <a class="dropdown-item" href="#">Productivity</a>
+                        <a class="dropdown-item" href="#">Design</a>
                       </div>
                     </li>
                     <li class="nav-item">
@@ -46,21 +49,112 @@
     <header class="web-header">
         <h1 class="web-title">Listen</h1>
     </header>
-    <section class="songs-list">
-        <% for (let i = 0; i < 15; i++) { %>
-        <article class="song">
+    <section class="notice-list">
+        <!--articulo1 -->
+        <article class="notice">
             <div class="cover">
-                <img src="<%= require('./assets/img/disk-empty.png') %>" alt="Artist name - Song title">
+                <img src="<%= require('./assets/img/animals.jpg') %>" alt="Artist name - Song title">
             </div>
             <div class="info">
                 <div class="title">Song title</div>
                 <div class="artist">Artist name</div>
             </div>
         </article>
-        <% } %>
+        <!--articulo2 -->
+        <article class="notice">
+          <div class="cover">
+              <img src="<%= require('./assets/img/animalsII.jpg') %>" alt="Artist name - Song title">
+          </div>
+          <div class="info">
+              <div class="title">Song title</div>
+              <div class="artist">Artist name</div>
+          </div>
+        </article>
+        <!--articulo3 -->
+        <article class="notice">
+          <div class="cover">
+            <img src="<%= require('./assets/img/coleccionismo.jpg') %>" alt="Artist name - Song title">
+          </div>
+          <div class="info">
+            <div class="title">Song title</div>
+            <div class="artist">Artist name</div>
+          </div>
+        </article>
+        <!--articulo4 -->
+        <article class="notice">
+          <div class="cover">
+            <img src="<%= require('./assets/img/placeholder.jpg') %>" alt="Artist name - Song title">
+          </div>
+          <div class="info">
+            <div class="title">Song title</div>
+            <div class="artist">Artist name</div>
+          </div>
+        </article>
+        <!--articulo5 -->
+        <article class="notice">
+          <div class="cover">
+            <img src="<%= require('./assets/img/foodII.jpg') %>" alt="Artist name - Song title">
+          </div>
+          <div class="info">
+            <div class="title">Song title</div>
+            <div class="artist">Artist name</div>
+          </div>
+        </article>
+        <!--articulo6 -->
+        <article class="notice">
+          <div class="cover">
+            <img src="<%= require('./assets/img/foodIII.jpg') %>" alt="Artist name - Song title">
+          </div>
+          <div class="info">
+            <div class="title">Song title</div>
+            <div class="artist">Artist name</div>
+          </div>
+        </article>
+        <!--articulo7 -->
+        <article class="notice">
+          <div class="cover">
+            <img src="<%= require('./assets/img/sports.jpg') %>" alt="Artist name - Song title">
+          </div>
+            <div class="info">
+            <div class="title">Song title</div>
+            <div class="artist">Artist name</div>
+          </div>
+        </article>
+        <!--articulo8 -->
+        <article class="notice">
+          <div class="cover">
+            <img src="<%= require('./assets/img/turismo.jpg') %>" alt="Artist name - Song title">
+          </div>
+            <div class="info">
+            <div class="title">Song title</div>
+            <div class="artist">Artist name</div>
+          </div>
+        </article>
+        <!--articulo9 -->
+        <article class="notice">
+            <div class="cover">
+              <img src="<%= require('./assets/img/placeholder.jpg') %>" alt="Artist name - Song title">
+            </div>
+              <div class="info">
+              <div class="title">Song title</div>
+              <div class="artist">Artist name</div>
+            </div>
+        </article>
+        <!--articulo10 -->
+        <article class="notice">
+            <div class="cover">
+                <video width="500" controls>
+                  <source src="<%= require('./assets/img/video_yoga.mp4') %>" type="video/mp4">
+                </video>   
+            </div>
+              <div class="info">
+              <div class="title">Song title</div>
+              <div class="artist">Artist name</div>
+            </div>
+        </article>
     </section>
     <footer class="web-footer">
-        2018 &copy; All rights reserved.
+        Notice 2018 &copy; All rights reserved.
     </footer>
 </body>
 </html>

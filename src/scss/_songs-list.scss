@@ -1,12 +1,12 @@
 @import "mixins/text-overflow-ellipsis";
 @import "mixins/responsive-utils";
 
-.songs-list {
+.notice-list {
 
     margin: 0 auto; // centra un div horizontalmente (candidato de mixin)
     max-width: $extra-large-device-width;
 
-    .song {
+    .notice {
         display: flex;
         background: white;
         margin: 10px;
