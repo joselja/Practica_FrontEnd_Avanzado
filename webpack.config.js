@@ -1,8 +1,19 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const isProduction = process.env.ENTORNO == "produccion";
 
+let scssLoaders = [];
+if (isProduction) {
+    scssLoaders = ExtractTextPlugin.extract({
+        fallback: 'style-loader',
+        use: ['css-loader?url=false&sourceMap=true', 'sass-loader?sourceMap=true']
+    });
+} else {
+    scssLoaders = ['style-loader', 'css-loader?url=false&sourceMap=true', 'sass-loader?sourceMap=true'];
+}
 
 module.exports = {
 
@@ -63,6 +74,9 @@ module.exports = {
             }, {
                 test : /\.mp4$/,
                 use  : [ { loader : 'file-loader' } ]
+            },{
+                test: /\.(html|ejs)$/,
+                use: ['html-loader', 'ejs-html-loader']
             }
             
         ]
@@ -78,6 +92,14 @@ module.exports = {
                 collapseWhitespace: true
             }
         }),
+        new HtmlWebpackPlugin({
+            filename: 'notice.html',
+            template: path.join(__dirname, 'src', 'notice.html'),
+            minify: {
+                collapseWhitespace: true
+            }
+        }),
+        new ExtractTextPlugin('style.css')
     ],
 
     // dev server configuration

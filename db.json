@@ -1,0 +1,17 @@
+{
+    "notices": [
+        {
+            "id": 1,
+            "title": "Animales",
+            "texto": "habla sobre los animales",
+            "media": "animals.jpg"
+        },
+        {
+            "id": 2,
+            "title": "Food",
+            "texto": "habla sobre la comida",
+            "media": "food.jpg"
+        }   
+    ]
+
+}
