@@ -54,6 +54,11 @@
                 font-size: $font-size-small;
                 @include text-overflow-ellipsis;
             }
+            .autor {
+                margin-top: 10px;
+                font-size: $font-size-mini;
+                @include text-overflow-ellipsis;
+            }
             .title {
                 font-weight: bold;
                 @include text-overflow-ellipsis;
