@@ -1,10 +1,10 @@
+@import "mixins/transparent-background";
 // Estilos de los tags HTML genéricos
 body {
     font-family: $main-font-family;
     font-size: $font-size-base;
     color: $main-text-color;
-    background: url('#{$images-path}doodles.png');
-}
+    }
 
 // Estilos de los títulos
 $titles-fonts-sizes: $font-size-h1, $font-size-h2, $font-size-h3, $font-size-h4, $font-size-h5, $font-size-h6;

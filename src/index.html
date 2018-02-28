@@ -1,110 +1,154 @@
-<%- include('includes/menu.html') %> 
-<%- include('includes/header.html') %>
-    <section class="notice-list">
-        <!--articulo1 -->
-        <article class="notice">
-            <div class="cover">
-                <img src="./assets/img/animals.jpg" alt="Artist name - Song title">
-            </div>
-            <div class="info">
-                <div class="title">Song title</div>
-                <div class="artist">Artist name</div>
-                <div class="autor">Rodrigo Diaz de Vivar</div>
+<%- include('includes/menu.html') %>
 
+<div class="row">
+    <!--articulo1-->
+    <div class="col-sm-6">
+        <div class="card" style="width: 28rem;">
+           <img class="card-img-top" src="./assets/img/coleccionismo.jpg" alt="Coleccionismo">
+           <div class="card-body">
+             <h5 class="card-title">Coleccionismo de coches</h5>
+             <p class="card-text">Desde siempre los coches antiguos han sido objeto de colección</p>
+           </div>
+           <ul class="list-group list-group-flush">
+             <li class="list-group-item">
+                <div class="container">
+                    <div class="row align-items-center">
+                      <div class="col-sm">
+                          <img class="card-img-top" src="./assets/img/perfil1.jpeg" class="img-thumbnail rounded mx-auto d-block" alt="Coleccionismo">
+                      </div>
+                      <div class="col-sm">
+                          By Elena Berrocal
+                      </div>
+                    </div>
+                </div> 
+              </li>
+             <li class="list-group-item">Fecha publicación</li>
+             <li class="list-group-item">Icono me gusta</li>
+           </ul>
+           <div class="card-body">
+             <a href="#" class="card-link">Comentarios</a>
+           </div>
+       </div>
+    </div>
+<!--articulo2-->
+  <div class="col-sm-6">
+    <div class="card" style="width: 28rem;">
+        <video width="500" controls>
+            <source src="./assets/img/video_yoga.mp4" type="video/mp4">
+        </video> 
+      <div class="card-body">
+        <h5 class="card-title">Coleccionismo de coches</h5>
+        <p class="card-text">Desde siempre los coches antiguos han sido objeto de colección</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-sm">
+                <img class="card-img-top" src="./assets/img/perfil2.jpeg" class="img-thumbnail rounded mx-auto d-block" alt="Coleccionismo">
+              </div>
+              <div class="col-sm">
+                By Francisco Jimenez
+              </div>
             </div>
-        </article>
-        <!--articulo2 -->
-        <article class="notice">
-          <div class="cover">
-              <img src="./assets/img/animalsII.jpg" alt="Artist name - Song title">
-          </div>
-          <div class="info">
-              <div class="title">Song title</div>
-              <div class="artist">Artist name</div>
-          </div>
-        </article>
-        <!--articulo3 -->
-        <article class="notice">
-          <div class="cover">
-            <img src="./assets/img/coleccionismo.jpg" alt="Artist name - Song title">
-          </div>
-          <div class="info">
-            <div class="title">Song title</div>
-            <div class="artist">Artist name</div>
-          </div>
-        </article>
-        <!--articulo4 -->
-        <article class="notice">
-          <div class="cover">
-            <img src="./assets/img/turismoII.jpg" alt="Artist name - Song title">
-          </div>
-          <div class="info">
-            <div class="title">Song title</div>
-            <div class="artist">Artist name</div>
-          </div>
-        </article>
-        <!--articulo5 -->
-        <article class="notice">
-          <div class="cover">
-            <img src="./assets/img/foodII.jpg" alt="Artist name - Song title">
-          </div>
-          <div class="info">
-            <div class="title">Song title</div>
-            <div class="artist">Artist name</div>
-          </div>
-        </article>
-        <!--articulo6 -->
-        <article class="notice">
-          <div class="cover">
-            <img src="./assets/img/foodIII.jpg" alt="Artist name - Song title">
-          </div>
-          <div class="info">
-            <div class="title">Song title</div>
-            <div class="artist">Artist name</div>
-          </div>
-        </article>
-        <!--articulo7 -->
-        <article class="notice">
-          <div class="cover">
-            <img src="./assets/img/sports.jpg" alt="Artist name - Song title">
-          </div>
-            <div class="info">
-            <div class="title">Song title</div>
-            <div class="artist">Artist name</div>
-          </div>
-        </article>
-        <!--articulo8 -->
-        <article class="notice">
-          <div class="cover">
-            <img src="./assets/img/turismo.jpg" alt="Artist name - Song title">
-          </div>
-            <div class="info">
-            <div class="title">Song title</div>
-            <div class="artist">Artist name</div>
-          </div>
-        </article>
-        <!--articulo9 -->
-        <article class="notice">
-            <div class="cover">
-              <img src="./assets/img/coleccionismo.jpg" alt="Artist name - Song title">
-            </div>
-              <div class="info">
-              <div class="title">Song title</div>
-              <div class="artist">Artist name</div>
-            </div>
-        </article>
-        <!--articulo10 -->
-        <article class="notice">
-            <div class="cover">
-                <video width="500" controls>
-                  <source src="./assets/img/video_yoga.mp4" type="video/mp4">
-                </video>   
-            </div>
-              <div class="info">
-              <div class="title">Song title</div>
-              <div class="artist">Artist name</div>
-              <div class="comments"><a href="notice.html">Comentarios</a></div>
-            </div>
-        </article>
-    </section>
-    <%- include('includes/footer.html') %>
+          </div> 
+          </li>
+         <li class="list-group-item">Fecha publicación</li>
+         <li class="list-group-item">Icono me gusta</li>
+       </ul>
+       <div class="card-body">
+         <a href="#" class="card-link">Comentarios</a>
+       </div>
+   </div>
+</div>
+<!--articulo3-->
+<div class="col-sm-6">
+    <div class="card" style="width: 28rem;">
+       <img class="card-img-top" src="./assets/img/sports.jpg" alt="Deportes">
+       <div class="card-body">
+         <h5 class="card-title">Coleccionismo de coches</h5>
+         <p class="card-text">Desde siempre los coches antiguos han sido objeto de colección</p>
+       </div>
+       <ul class="list-group list-group-flush">
+         <li class="list-group-item">
+            <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-sm">
+                      <img class="card-img-top" src="./assets/img/perfil1.jpeg" class="img-thumbnail rounded mx-auto d-block" alt="Coleccionismo">
+                  </div>
+                  <div class="col-sm">
+                      By Elena Berrocal
+                  </div>
+                </div>
+            </div> 
+          </li>
+         <li class="list-group-item">Fecha publicación</li>
+         <li class="list-group-item">Icono me gusta</li>
+       </ul>
+       <div class="card-body">
+         <a href="#" class="card-link">Comentarios</a>
+       </div>
+   </div>
+</div>
+<!--articulo4-->
+<div class="col-sm-6">
+    <div class="card" style="width: 28rem;">
+       <img class="card-img-top" src="./assets/img/sports.jpg" alt="Deportes">
+       <div class="card-body">
+         <h5 class="card-title">Coleccionismo de coches</h5>
+         <p class="card-text">Desde siempre los coches antiguos han sido objeto de colección</p>
+       </div>
+       <ul class="list-group list-group-flush">
+         <li class="list-group-item">
+            <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-sm">
+                      <img class="card-img-top" src="./assets/img/perfil1.jpeg" class="img-thumbnail rounded mx-auto d-block" alt="Coleccionismo">
+                  </div>
+                  <div class="col-sm">
+                      By Elena Berrocal
+                  </div>
+                </div>
+            </div> 
+          </li>
+         <li class="list-group-item">Fecha publicación</li>
+         <li class="list-group-item">Icono me gusta</li>
+       </ul>
+       <div class="card-body">
+         <a href="#" class="card-link">Comentarios</a>
+       </div>
+   </div>
+</div>
+
+<!--articulo5-->
+<div class="col-sm-6">
+    <div class="card" style="width: 28rem;">
+       <img class="card-img-top" src="./assets/img/sports.jpg" alt="Deportes">
+       <div class="card-body">
+         <h5 class="card-title">Coleccionismo de coches</h5>
+         <p class="card-text">Desde siempre los coches antiguos han sido objeto de colección</p>
+       </div>
+       <ul class="list-group list-group-flush">
+         <li class="list-group-item">
+            <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-sm">
+                      <img class="card-img-top" src="./assets/img/perfil1.jpeg" class="img-thumbnail rounded mx-auto d-block" alt="Coleccionismo">
+                  </div>
+                  <div class="col-sm">
+                      By Elena Berrocal
+                  </div>
+                </div>
+            </div> 
+          </li>
+         <li class="list-group-item">Fecha publicación</li>
+         <li class="list-group-item">Icono me gusta</li>
+       </ul>
+       <div class="card-body">
+         <a href="#" class="card-link">Comentarios</a>
+       </div>
+   </div>
+</div>
+</div>
+
+<%- include('includes/footer.html') %>  
