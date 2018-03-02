@@ -1,17 +1,29 @@
 {
-    "notices": [
+    "comments": [
         {
             "id": 1,
-            "title": "Animales",
-            "texto": "habla sobre los animales",
-            "media": "animals.jpg"
+            "name": "Pepe Jimenez",
+            "email": "pepe_jime24@gmail.com",
+            "text": "Me ha gustado el artículo"
         },
         {
             "id": 2,
-            "title": "Food",
-            "texto": "habla sobre la comida",
-            "media": "food.jpg"
-        }   
+            "name": "Maria Hernandez",
+            "email": "mar_her@gmail.com",
+            "text": "Enhorabuena por el artículo, seguir asi"
+        },
+        {
+            "id": 3,
+            "name": "Jose Luis Lopez",
+            "email": "jose_lopez@gmail.com",
+            "text": "Enhorabuena por el artículo, seguir asi"
+        },
+        {
+            "id": 4,
+            "name": "Fernando Calvo",
+            "email": "fer_calvo@gmail.com",
+            "text": "Muy bueno, seguir asi"
+        }        
     ]
 
 }
