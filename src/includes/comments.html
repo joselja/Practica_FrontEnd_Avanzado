@@ -1,18 +1,18 @@
 <h2 class="mt-5 ml-5 mr-5">Add your comment<br></h2>
-<form class="mt-5 ml-5 mr-5">
+<form novalidate class="comments-form mt-5 ml-5 mr-5">
     <div class="form-row">
         <div class="form-group col-md-4">
             <label for="inputNombre"></label>
-            <input type="text" class="form-control" id="inputNombre" placeholder="Name">
+            <input type="text" class="form-control" id="inputNombre" placeholder="Name" required>
         </div>
         <div class="form-group col-md-4">
             <label for="inputEmail"></label>
-            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
         </div>   
     </div>
     <div class="form-group">
         <label for="inputCity"></label>
-        <input type="textarea" rows="4" cols="50" class="form-control" id="inputComentarios" placeholder="Comments (max. 120 palabras)">
+        <input type="textarea" rows="4" cols="50" class="form-control" id="inputComentarios" placeholder="Comments (max. 120 palabras)" required>
     </div>
-    <button type="submit" class="btn btn-primary">Submit Comment</button>
+    <button disabled type="submit" class="btn btn-primary">Submit Comment</button>
 </form>

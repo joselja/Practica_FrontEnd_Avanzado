@@ -1,11 +1,37 @@
 import css from './scss/style.scss';
 import 'bootstrap';
 import './scss/app.scss';
+import { CommentsService } from './js/CommentsService';
+import { AppController } from './js/AppController';
+import { FormController } from './js/FormController';
+import { CommentsListController } from './js/CommentsListController';
+import { PubSub } from 'pubsub-js';
+
 
 document.addEventListener("DOMContentLoaded", () => {
+
+    //let appController = new AppController("body", PubSub);
+    
+
+    let commentsService = new CommentsService('http://localhost:3001/comments/');
+
+    let commentsListController = new CommentsListController(".comments", commentsService, PubSub);
+    commentsListController.loadComments();
+
+    
+    //let formController = new FormController('.comments-form');
+    let formController = new FormController('.comments-form', commentsService, PubSub);
+
+});
+
+
+/*
+document.addEventListener("DOMContentLoaded", () => {
+    let commentsService = new CommentsService();
+
     document.querySelector(".comments").innerHTML = `<li class="list-group-item"><div>Loading comments...</div></li>`;
 
-    fetch('http://localhost:3001/comments/').then((response) => {
+    commentsService.list().then((repsonse) => {
         if (response.ok) {
         response.json().then(data => {
             let html = "";
@@ -30,3 +56,4 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector(".comments").innerHTML = `<li class="list-group-item"><div>Error loading comments</div></li>`;
     });
 });   
+*/
