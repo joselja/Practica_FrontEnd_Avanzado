@@ -4,6 +4,7 @@ import { CommentsService } from './js/CommentsService';
 import { AppController } from './js/AppController';
 import { FormController } from './js/FormController';
 import { CommentsListController } from './js/CommentsListController';
+import { CommentsNumberController } from './js/CommentsNumberController';
 import { PubSub } from 'pubsub-js';
 
 
@@ -13,9 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
     
 
     let commentsService = new CommentsService('http://localhost:3001/comments/');
+    
+    let commentsNumberController = new CommentsNumberController(".card-number-comments", commentsService, PubSub);
+    commentsNumberController.loadCommentsArticle();
 
-    let commentsListController = new CommentsListController(".comments", commentsService, PubSub);
-    commentsListController.loadComments();
+    let commentsListControllerDetail = new CommentsListController(".comments", commentsService, PubSub);
+    commentsListControllerDetail.loadComments();
 
     
     let formController = new FormController('.comments-form', commentsService, PubSub);
