@@ -1,6 +1,5 @@
 import css from './scss/style.scss';
 import 'bootstrap';
-import './scss/app.scss';
 import { CommentsService } from './js/CommentsService';
 import { AppController } from './js/AppController';
 import { FormController } from './js/FormController';
@@ -19,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
     commentsListController.loadComments();
 
     
-    //let formController = new FormController('.comments-form');
     let formController = new FormController('.comments-form', commentsService, PubSub);
 
 });
