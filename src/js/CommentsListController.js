@@ -1,3 +1,4 @@
+import moment from 'moment';
 export class CommentsListController {
 
     constructor(selector, commentsService, pubSub) {
@@ -46,6 +47,36 @@ export class CommentsListController {
             console.error("ERROR RETRIEVING COMMENTS", error);
             this.showErrorMessage();
         });
+
+    }
+    setDateArticle(){
+            moment.locale('es');
+            let myCollection = document.getElementsByClassName("date");
+            
+            let date1 = moment(myCollection.innerHTML, "DD-MM-YYYY HH-mm-ss");          
+            let date_actual = moment();         
+            let diff_days = date_actual.diff(date1, "days");
+            let diff_horas = date_actual.diff(date1, "hours");
+            let diff_min = date_actual.diff(date1, "minutes");
+            let diff_sec = date_actual.diff(date1, "seconds");          
+            let day_of_week= date1.format("dddd");
+            if (diff_days >= 7){
+                myCollection.innerHTML = `<p>Published at ${date1.creationData().input}</p>`;
+            }
+            else {
+                myCollection.innerHTML = `<p>Published on ${day_of_week}</p>`;
+            }
+            if (diff_horas < 24) {
+                myCollection.innerHTML = `<p>Published ${diff_horas} hours ago</p>`;
+            }          
+            if (diff_horas == 0){
+                myCollection.innerHTML = `<p>Published ${diff_min} minutes ago</p>`;
+            }
+            if (diff_min == 0){
+                myCollection.innerHTML = `<p>Published ${diff_sec} seconds ago</p>`;
+            }
+
+
 
     }
     

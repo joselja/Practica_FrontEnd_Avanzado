@@ -23,7 +23,7 @@ export class FormController {
         // en todos los input que hay en el formulario, los valido cuando se pierde el foco
         this.element.querySelectorAll('input').forEach(input => {
                 input.addEventListener('blur', event => {
-                /*if (this.element.querySelector('#inputComentarios').id == "inputComentarios") {
+                if (this.element.querySelector('#inputComentarios').id == "inputComentarios") {
                     var observaPalabrasUno = this.element.querySelector("#inputComentarios").value.split("\n").join(" ");
                     var observaPalabras = observaPalabrasUno.split(" ");
                     var observaPalabrasClean = observaPalabras.filter(Boolean);
@@ -35,7 +35,7 @@ export class FormController {
                         passComment = true;
                         input.classList.remove('error');
                     }
-                }*/
+                }
                 if (input.checkValidity() == false) {
                     input.classList.add('error');
                 } else {
