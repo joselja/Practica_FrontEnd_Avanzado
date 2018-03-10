@@ -15,20 +15,31 @@ export class CommentsNumberController {
 
     setDateArticle(){
         this.commentsService.list().then(comments => {
+            let i;
             moment.locale('es');
-            
-            let date1 = moment(document.getElementsByClassName("date1")[0].innerHTML, "DD-MM-YYYY HH-mm-ss");
-                       
-            let date_actual = moment().format('DD-MM-YYYY HH-mm-ss');
-            
-            //document.querySelector(".date1").innerHTML = `<p>${moment().format('L')}</p>`;
-            console.log(date1, "fecha 1");
-            console.log(date_actual, "fecha actual");
-            let diff_days = date1.diff(date_actual, 'days');
-            //if (diff_days >= 7){
-            //    document.querySelector(".date1").innerHTML = `<p>${date1}</p>`;
-            //}
-            console.log(date1.diff(date_actual, 'days'), ' dias de diferencia');
+            let date1 = moment(document.getElementsByClassName("date1")[0].innerHTML, "DD-MM-YYYY HH-mm-ss");          
+            let date_actual = moment();         
+            let diff_days = date_actual.diff(date1, "days");
+            let diff_horas = date_actual.diff(date1, "hours");
+            let diff_min = date_actual.diff(date1, "minutes");
+            let diff_sec = date_actual.diff(date1, "seconds");          
+            let day_of_week= date1.format("dddd");
+
+            if (diff_days >= 7){
+                document.querySelector(".date1").innerHTML = `<p>${date1.creationData().input}</p>`;
+            }
+            else {
+                document.querySelector(".date1").innerHTML = `<p>${day_of_week}</p>`;
+            }
+            if (diff_horas < 24) {
+                document.querySelector(".date1").innerHTML = `<p>${diff_horas} hours ago</p>`;
+            }          
+            if (diff_horas == 0){
+                document.querySelector(".date1").innerHTML = `<p>${diff_min} minutes ago</p>`;
+            }
+            if (diff_min == 0){
+                document.querySelector(".date1").innerHTML = `<p>${diff_sec} seconds ago</p>`;
+            }
         
     }).catch((error) => {
         console.error("PROBLEM CALCULATING DATES", error);
