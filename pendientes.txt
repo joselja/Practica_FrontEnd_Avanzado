@@ -10,4 +10,4 @@ Número de comentarios del artículo en la plantilla de listado de artículos.
 
 Sistema de paginación.
 
-Controlar maximo de 120 palabras en eltexto del comentario.
+Controlar maximo de 120 palabras en el texto del comentario.

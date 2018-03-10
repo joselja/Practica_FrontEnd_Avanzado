@@ -8,14 +8,17 @@ import { CommentsNumberController } from './js/CommentsNumberController';
 import { PubSub } from 'pubsub-js';
 
 
+
 document.addEventListener("DOMContentLoaded", () => {
 
     //let appController = new AppController("body", PubSub);
     
 
+
     let commentsService = new CommentsService('http://localhost:3001/comments/');
     
     let commentsNumberController = new CommentsNumberController(".card-number-comments", commentsService, PubSub);
+    commentsNumberController.setDateArticle();
     commentsNumberController.loadCommentsArticle();
 
     let commentsListControllerDetail = new CommentsListController(".comments", commentsService, PubSub);

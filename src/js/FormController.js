@@ -19,6 +19,33 @@ export class FormController {
         this.addFormSubmitListener();
     }
 
+    addInputListeners() {
+        // en todos los input que hay en el formulario, los valido cuando se pierde el foco
+        this.element.querySelectorAll('input').forEach(input => {
+                input.addEventListener('blur', event => {
+                /*if (this.element.querySelector('#inputComentarios').id == "inputComentarios") {
+                    var observaPalabrasUno = this.element.querySelector("#inputComentarios").value.split("\n").join(" ");
+                    var observaPalabras = observaPalabrasUno.split(" ");
+                    var observaPalabrasClean = observaPalabras.filter(Boolean);
+                    var numeroPalabras = observaPalabrasClean.length;  
+                    if (numeroPalabras > 120) {
+                        passComment = false;
+                        input.classList.add('error');
+                    } else {
+                        passComment = true;
+                        input.classList.remove('error');
+                    }
+                }*/
+                if (input.checkValidity() == false) {
+                    input.classList.add('error');
+                } else {
+                    input.classList.remove('error');
+                }
+                this.checkFormValidity();
+            });
+        });
+    }
+
     addFormSubmitListener() {
         this.element.addEventListener('submit', event => {
             event.preventDefault();
@@ -48,33 +75,7 @@ export class FormController {
         }
     }
 
-    addInputListeners() {
-        // en todos los input que hay en el formulario, los valido cuando se pierde el foco
-        this.element.querySelectorAll('input').forEach(input => {
-                input.addEventListener('blur', event => {
-                /*if (this.element.querySelector('#inputComentarios').id == "inputComentarios") {
-                    var observaPalabrasUno = this.element.querySelector("#inputComentarios").value.split("\n").join(" ");
-                    var observaPalabras = observaPalabrasUno.split(" ");
-                    var observaPalabrasClean = observaPalabras.filter(Boolean);
-                    var numeroPalabras = observaPalabrasClean.length;  
-                    if (numeroPalabras > 120) {
-                        passComment = false;
-                        input.classList.add('error');
-                    } else {
-                        passComment = true;
-                        input.classList.remove('error');
-                    }
-                }*/
-                if (input.checkValidity() == false) {
-                    input.classList.add('error');
-                } else {
-                    input.classList.remove('error');
-                }
-                this.checkFormValidity();
-            });
-        });
-    }
-
+    
     checkFormValidity() {
         let button = this.element.querySelector('button');
         if ((this.element.checkValidity()) && (passComment == true)) {
