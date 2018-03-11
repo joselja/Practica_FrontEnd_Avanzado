@@ -18,7 +18,7 @@ if (isProduction) {
 module.exports = {
 
     // entry point: archivo que lee webpack para construir el grafo de dependencias
-    entry: path.join(__dirname, 'src', 'entry.js'),
+    entry: ['babel-polyfill', path.join(__dirname, 'src', 'entry.js')],
 
     // output: carpeta en la que quiero que webpack me deje el código generado
     output: {
