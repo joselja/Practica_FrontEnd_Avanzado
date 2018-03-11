@@ -3,15 +3,15 @@ Plataforma de publicación de Noticias.
 
 ## Instalación
 
-Usamos [json-server](https://github.com/typicode/json-server) como API Rest server. Antes de ejcutarlo hay que arrancarlo start [json-server](https://github.com/typicode/json-server) to work.
+Usamos [json-server](https://github.com/typicode/json-server) como API Rest server. Antes de ejcutarlo hay que arrancarlo start [json-server](https://github.com/typicode/json-server)
 
-Para instalar News, ejecutar `npm install` or `npm i`
+Para instalar News, ejecutar `npm install` o `npm i`
 
 
 
 ## Start scripts
 
-News trabaja con [Webpack](https://github.com/webpack/webpack). Run any of the following commands depending on how you want to work:
+News trabaja con [Webpack](https://github.com/webpack/webpack). Ejecutar alguno de los siguientes comandos:
 
 | Comando  | Modo |
 | ------------- | ------------- |
