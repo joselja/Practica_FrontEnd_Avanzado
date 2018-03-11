@@ -24,20 +24,7 @@ export class FormController {
         this.element.querySelectorAll('input, textarea').forEach(input => {
             if (input.tagName == 'INPUT') {
                 input.addEventListener('blur', event => {
-                /*if (this.element.querySelector('#inputComentarios').id == "inputComentarios") {
-                    var observaPalabrasUno = this.element.querySelector("#inputComentarios").value.split("\n").join(" ");
-                    var observaPalabras = observaPalabrasUno.split(" ");
-                    var observaPalabrasClean = observaPalabras.filter(Boolean);
-                    var numeroPalabras = observaPalabrasClean.length;  
-                    if (numeroPalabras > 120) {
-                        passComment = false;
-                        input.classList.add('error');
-                    } else {
-                        passComment = true;
-                        input.classList.remove('error');
-                    }
-                }*/
-
+               
                 if (input.checkValidity() == false) {
                     input.classList.add('error');
                 } else {
