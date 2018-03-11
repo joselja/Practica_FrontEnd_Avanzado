@@ -26,6 +26,6 @@ News trabaja con [Webpack](https://github.com/webpack/webpack). Ejecutar alguno 
 - Calculo de fechas dinámicas con [moment](https://momentjs.com/) library
 - Categorias sin persistencia
 - Post navigation
-- Sistemas dinámica de comentarios
+- Sistema de comentarios dinámico
 
 
