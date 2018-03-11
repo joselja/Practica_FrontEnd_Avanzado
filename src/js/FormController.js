@@ -21,9 +21,10 @@ export class FormController {
 
     addInputListeners() {
         // en todos los input que hay en el formulario, los valido cuando se pierde el foco
-        this.element.querySelectorAll('input').forEach(input => {
+        this.element.querySelectorAll('input, textarea').forEach(input => {
+            if (input.tagName == 'INPUT') {
                 input.addEventListener('blur', event => {
-                if (this.element.querySelector('#inputComentarios').id == "inputComentarios") {
+                /*if (this.element.querySelector('#inputComentarios').id == "inputComentarios") {
                     var observaPalabrasUno = this.element.querySelector("#inputComentarios").value.split("\n").join(" ");
                     var observaPalabras = observaPalabrasUno.split(" ");
                     var observaPalabrasClean = observaPalabras.filter(Boolean);
@@ -35,7 +36,8 @@ export class FormController {
                         passComment = true;
                         input.classList.remove('error');
                     }
-                }
+                }*/
+
                 if (input.checkValidity() == false) {
                     input.classList.add('error');
                 } else {
@@ -43,8 +45,20 @@ export class FormController {
                 }
                 this.checkFormValidity();
             });
-        });
-    }
+        } else{
+            input.addEventListener('keyup', event => {
+                
+                if (input.checkValidity() == false) {
+                    input.classList.add('error');
+                } else {
+                    input.classList.remove('error');
+                }
+                this.checkFormValidity();
+            });
+        }
+    });
+}
+        
 
     addFormSubmitListener() {
         this.element.addEventListener('submit', event => {
@@ -78,7 +92,7 @@ export class FormController {
     
     checkFormValidity() {
         let button = this.element.querySelector('button');
-        if ((this.element.checkValidity()) && (passComment == true)) {
+        if (this.element.checkValidity())  {
             button.disabled = false;
         } else {
             button.disabled = true;

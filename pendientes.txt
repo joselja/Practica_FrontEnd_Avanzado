@@ -1,3 +1,0 @@
-Sistema de paginación.
-
-Controlar maximo de 120 palabras en el texto del comentario.
