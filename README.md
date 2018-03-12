@@ -3,7 +3,7 @@ Plataforma de publicación de Noticias.
 
 ## Instalación
 
-Usamos [json-server](https://github.com/typicode/json-server) como API Rest server. Antes de ejcutarlo hay que arrancarlo start [json-server](https://github.com/typicode/json-server)
+Usamos [json-server](https://github.com/typicode/json-server) como API Rest server. Antes de ejcutarlo hay que arrancarlo npm start [json-server](https://github.com/typicode/json-server)
 
 Para instalar News, ejecutar `npm install` o `npm i`
 
